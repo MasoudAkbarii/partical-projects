@@ -1,0 +1,135 @@
+@import "./assets/CSSRESET.css";
+html,
+body,
+.page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -moz-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -o-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  color: #fff;
+  overflow: hidden;
+}
+.page {
+  position: absolute;
+}
+#p1 {
+  left: 0;
+}
+#p2,
+#p3 {
+  left: 200%;
+}
+#p1 {
+  background-color: darkslateblue;
+}
+#p2 {
+  background-color: gold;
+}
+#p3 {
+  background-color: rebeccapurple;
+}
+#t2:target #p2,
+#t3:target #p3 {
+  transform: translateX(-190%);
+  -webkit-transform: translateX(-190%);
+  -moz-transform: translateX(-190%);
+  -o-transform: translateX(-190%);
+  transition-delay: 0.4s;
+}
+#t2:target #p1,
+#t3:target #p1 {
+  background-color: #000;
+}
+#t2:target #p1 .icon,
+#t3:target #p1 .icon {
+  filter: blur(3px);
+}
+.icon {
+  color: #fff;
+  font-size: 32px;
+  display: block;
+}
+ul .icon:hover {
+  opacity: 0.5;
+}
+#t2:target ul .icon,
+#t3:target ul .icon {
+  transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+}
+ul#menu {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 280px;
+  width: 10%;
+  padding: 0;
+  text-align: center;
+}
+ul#menu .icon {
+  margin: 30px 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.title,
+.hint {
+  display: block;
+}
+.hint {
+  font-size: 23px;
+  line-height: 2;
+}
+.title {
+  font-size: 38px;
+}
+.page .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  left: 0;
+  width: 270px;
+  height: 170px;
+  margin: auto;
+  text-align: center;
+  font-size: 80px;
+  line-height: 1.5;
+  transform: translate(360%);
+  -webkit-transform: translate(360%);
+  -moz-transform: translate(360%);
+  -o-transform: translate(360%);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5.1.25);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5.1.25);
+  -moz-transition: all 0.5s cubic-bezier(0.25, 1, 0.5.1.25);
+  -o-transition: all 0.5s cubic-bezier(0.25, 1, 0.5.1.25);
+}
+#p1 .icon {
+  height: 420px;
+  transform: translate(10%) !important;
+  -webkit-transform: translate(10%);
+  -moz-transform: translate(10%);
+  -o-transform: translate(10%);
+}
+#t2:target #p2 .icon,
+#t3:target #p3 .icon {
+  transform: translate(0) !important;
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -o-transform: translate(0);
+  transition-delay: 1s;
+}

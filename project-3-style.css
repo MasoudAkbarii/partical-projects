@@ -1,0 +1,66 @@
+@import "./assets/CSSRESET.css";
+.img-res {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+body {
+  background-color: #5b80aa;
+  overflow: hidden;
+}
+label {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+input#hamber {
+  display: none;
+}
+label img.cross {
+  display: none;
+}
+input#hamber:checked ~ label img.hamber {
+  display: none;
+}
+input#hamber:checked ~ label img.cross {
+  display: block;
+}
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.main span {
+  color: #fff;
+  font-size: 40px;
+  margin: auto;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: tomato;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  transform: translatey(100%);
+  transition: all 0.8s cubic-bezier(0.17, 0.88, 0.32, 1.25);
+}
+.menu div {
+  margin-top: 50px;
+  transition: all 0.8s cubic-bezier(0.17, 0.88, 0.32, 1.25);
+}
+.menu div a:hover {
+  color: rgb(196, 191, 191);
+  transition: all 0.25s linear;
+}
+input#hamber:checked ~ .menu div {
+  margin-top: 0;
+}
+input#hamber:checked ~ .menu {
+  transform: translatey(0);
+}

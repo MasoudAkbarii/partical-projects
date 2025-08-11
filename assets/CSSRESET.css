@@ -30,6 +30,10 @@ h6 {
   font-size: 1em;
   font-weight: normal;
 }
+ul,li{
+  display: block;
+  list-style: none;
+}
 
 a {
   background-color: transparent;

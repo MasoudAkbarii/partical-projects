@@ -1,0 +1,106 @@
+@import "assets/CSSRESET.css";
+body {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.8);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  font-size: 34px;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: 0;
+  min-width: 260px;
+  background-color: #5380f7;
+  color: #f5f5f5;
+  padding: 16px 20px;
+  border-radius: 4px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+.btn i {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+      0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+ul.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+ul.dropdown::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -5px;
+  right: 14px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid #fff;
+  border-right: 6px solid #fff;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  transform: rotate(-45deg);
+}
+ul.dropdown li {
+  position: relative;
+  padding: 0 20px;
+  color: #666;
+}
+ul.dropdown li.active {
+  color: #5380f7;
+}
+ul.dropdown li:first-child {
+  border-radius: 4px 4px 0 0;
+}
+ul.dropdown li:last-child {
+  border-radius: 0 0 4px 4px;
+}
+ul.dropdown li:last-child a {
+  border-bottom: 0;
+}
+ul.dropdown li a {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+  font-size: 14px;
+}
+.btn:focus ul.dropdown{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(20px);
+}

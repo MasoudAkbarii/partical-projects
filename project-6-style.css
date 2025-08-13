@@ -1,1 +1,88 @@
-@import"assets/CSSRESET.css";
+@import "assets/CSSRESET.css";
+body {
+  background-color: #fcdc29;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 34px;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainmenu {
+  width: 250px;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.item {
+  border-top: 1px solid #ef584a;
+}
+.btn {
+  display: block;
+  padding: 15px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  position: relative;
+}
+.submenu {
+  background-color: #273057;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+.submenu a {
+  display: block;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #394c7f;
+  position: relative;
+}
+.submenu a::before {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.submenu a:hover::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 6px;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-top: 24px solid transparent;
+  border-left: 11px solid #fcdc29;
+  border-bottom: 24px solid transparent;
+}
+.submenu a::after {
+  content: " ";
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.submenu a:hover::after {
+  content: " ";
+  position: absolute;
+  height: 0;
+  width: 6px;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  border-top: 24px solid transparent;
+  border-right: 11px solid #fcdc29;
+  border-bottom: 24px solid transparent;
+}
+.submenu a:hover{
+    background:#273057 ;
+    background: linear-gradient(to bottom,#273057 0%,#273057 50%,#394c7f 51%);
+}
+.item:target .submenu{
+    max-height: 200px;
+}
